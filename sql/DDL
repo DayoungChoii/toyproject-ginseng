@@ -1,0 +1,40 @@
+/**
+* 멤버 테이블 생성
+*/
+create table member(
+id CHAR(40) not null,
+pwd CHAR(40) not null,
+nickname CHAR(20) not null,
+primary key(id) )CHARSET = utf8;
+
+/**
+* 공통파일관 테이블 생성
+*/
+create table cmm_file(
+local_file_name CHAR(100) not null,
+real_file_name CHAR(100) not null,
+file_path CHAR(50) not null,
+trgt_id CHAR(30) not null,
+primary key(local_file_name, trgt_id) )CHARSET = utf8;
+
+
+/**
+* 산삼메시 테이블 생성
+*/
+create table ginseng_message(
+message_id CHAR(20) not null,
+sender_id CHAR(20) not null,
+reciever_id CHAR(20) not null,
+reg_date timestamp(6) not null,
+primary key(message_id) )CHARSET = utf8;
+
+
+/**
+* 친구 테이블 생성
+*/
+create table friend_relation(
+my_id CHAR(20) not null,
+friend_id CHAR(20) not null,
+status CHAR(1) not null,
+primary key(my_id, friend_id) )CHARSET = utf8;
+
