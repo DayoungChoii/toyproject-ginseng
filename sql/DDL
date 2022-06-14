@@ -3,7 +3,7 @@
 */
 create table member(
 id CHAR(40) not null,
-pwd CHAR(40) not null,
+password CHAR(40) not null,
 nickname CHAR(20) not null,
 primary key(id) )CHARSET = utf8;
 
@@ -24,7 +24,7 @@ primary key(local_file_name, trgt_id) )CHARSET = utf8;
 create table ginseng_message(
 message_id CHAR(20) not null,
 sender_id CHAR(20) not null,
-reciever_id CHAR(20) not null,
+receiver_id CHAR(20) not null,
 reg_date timestamp(6) not null,
 primary key(message_id) )CHARSET = utf8;
 
