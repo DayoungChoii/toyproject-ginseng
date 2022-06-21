@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dayoung.ginseng.member.repository.MybatisMemberMapper">
+    <insert id="insertMember" parameterType="com.dayoung.ginseng.member.domain.MemberVo">
+        INSERT INTO member (id, password, nickname, member_Id)
+        VALUES (#{id}, #{password}, #{nickname}, #{memberId})
+    </insert>
+
+    <select id="selectMember" parameterType="string"  resultType="com.dayoung.ginseng.member.domain.MemberVo">
+        SELECT ID as id, PASSWORD as password, NICKNAME as nickname, MEMBER_ID as memberId
+        FROM MEMBER
+        WHERE ID = #{id}
+    </select>
+</mapper>
