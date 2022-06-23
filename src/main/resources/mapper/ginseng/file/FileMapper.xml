@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dayoung.ginseng.file.repository.MybatisFileDBMapper">
+    <insert id="insertFile" parameterType="com.dayoung.ginseng.file.domain.UploadFile">
+        INSERT INTO cmm_file (local_file_name, real_file_name, file_path, target_id)
+        VALUES (#{localFileName}, #{realFileName}, #{filePath}, #{targetId})
+    </insert>
+</mapper>
