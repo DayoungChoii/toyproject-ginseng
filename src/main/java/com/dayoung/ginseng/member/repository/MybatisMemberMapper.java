@@ -12,4 +12,7 @@ public interface MybatisMemberMapper extends MemberDao {
 
     @Override
     MemberVo selectMember(String id);
+
+    @Override
+    MemberVo selectMemberByIdAndPassword(MemberVo member);
 }

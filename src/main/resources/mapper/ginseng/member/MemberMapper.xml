@@ -13,4 +13,11 @@
         FROM MEMBER
         WHERE ID = #{id}
     </select>
+
+    <select id="selectMemberByIdAndPassword" parameterType="com.dayoung.ginseng.member.domain.MemberVo"  resultType="com.dayoung.ginseng.member.domain.MemberVo">
+        SELECT id as id, password as password, nickname as nickname, member_id as memberId
+        FROM MEMBER
+        WHERE id = #{id}
+        AND password = #{password}
+    </select>
 </mapper>

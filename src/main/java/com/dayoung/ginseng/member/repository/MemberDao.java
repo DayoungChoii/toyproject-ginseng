@@ -7,4 +7,7 @@ public interface MemberDao {
     public void insertMember(MemberVo memberVo);
 
     public MemberVo selectMember(String id);
+
+    public MemberVo selectMemberByIdAndPassword(MemberVo member);
 }
+

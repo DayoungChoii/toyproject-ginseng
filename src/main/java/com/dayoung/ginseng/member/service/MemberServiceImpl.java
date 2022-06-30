@@ -11,7 +11,6 @@ import com.dayoung.ginseng.member.util.SHA256;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
@@ -36,7 +35,6 @@ public class MemberServiceImpl implements MemberService {
     }
 
     @Override
-    @Transactional
     public void register(MemberRegisterForm memberRegisterForm, MultipartFile profileFile) throws NoSuchAlgorithmException, IOException {
         MemberVo memberVo = new MemberVo();
         setVoFromForm(memberRegisterForm, memberVo);
